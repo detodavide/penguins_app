@@ -13,11 +13,11 @@ def main():
 
     st.subheader("Select between manual input and from a csv/xlsx file as input data")
 
-    options = ['DF INPUT INFERENCE', 'MANUAL INPUT INFERENCE']
+    options = ['FILE INPUT INFERENCE', 'MANUAL INPUT INFERENCE']
     selected_option = st.selectbox('Select an option: ', options)
  
 
-    if selected_option == "DF INPUT INFERENCE":
+    if selected_option == "FILE INPUT INFERENCE":
         df_inf()
 
     if selected_option == "MANUAL INPUT INFERENCE":
