@@ -26,7 +26,7 @@ def main():
     df = pd.DataFrame(data)
     X = pd.get_dummies(df).to_numpy()
     st.dataframe(X)
-    model = joblib.load("penguins_logreg.pkl")
+    model = joblib.load("penguins_pipe.pkl")
     y = model.predict(X)
 
     # Display the prediction
