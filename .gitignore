@@ -14,7 +14,7 @@ __pycache__/
 penguins_dataset.csv
 penguins_unlabelled.csv
 
-
+data/
 test.ipynb
 .Python
 build/
