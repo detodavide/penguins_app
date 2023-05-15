@@ -11,7 +11,7 @@ def main():
 
     st.title("Inference")
 
-    st.subheader("Select between manual input and from a csv/xlsx file as input data")
+    st.subheader("Select between manual input or from a csv/xlsx file as input data")
 
     options = ['FILE INPUT INFERENCE', 'MANUAL INPUT INFERENCE']
     selected_option = st.selectbox('Select an option: ', options)
