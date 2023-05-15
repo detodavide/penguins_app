@@ -7,8 +7,12 @@ from io import BytesIO
 from utils.cache_convert import convert_df
 
 def main():
-    model = joblib.load("penguins_logreg.pkl")
-        #inference
+    absolute_path = os.path.dirname(__file__)
+    relative_path = "regression_iris.pkl"
+    full_path = os.path.join(absolute_path, relative_path)
+
+    model = joblib.load(full_path)
+    #inference
     st.title("Penguins Classification") 
 
     st.subheader("Inference uploading a dataset")
