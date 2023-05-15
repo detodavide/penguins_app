@@ -11,11 +11,9 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-penguins_dataset.csv
-penguins_unlabelled.csv
-
 data/
-test.ipynb
+eda.ipynb
+pipe_test.ipynb
 .Python
 build/
 develop-eggs/
