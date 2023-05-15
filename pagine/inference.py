@@ -8,10 +8,10 @@ from utils.cache_convert import convert_df
 
 def main():
     absolute_path = os.path.dirname(__file__)
-    relative_path = "regression_iris.pkl"
+    relative_path = "penguins_pipe.pkl"
     full_path = os.path.join(absolute_path, relative_path)
 
-    model = joblib.load(full_path)
+    model_pipe = joblib.load(full_path)
     #inference
     st.title("Penguins Classification") 
 
@@ -31,8 +31,8 @@ def main():
         dfdesc = df.describe(include='all').T.fillna("")
         st.write(dfdesc)
 
-        X = pd.get_dummies(df)
-        df_pred = model.predict(X)
+        
+        df_pred = model_pipe.predict(df)
         df['species'] = df_pred
         st.write('Updated Dataframe')
         st.dataframe(df)
