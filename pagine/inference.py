@@ -40,7 +40,7 @@ def main():
 
         # Download buttons
         csv = convert_df(df)
-        filename = "filename"
+        filename = "penguins_predicted_data"
 
         st.download_button(
             label="Download data as CSV",
