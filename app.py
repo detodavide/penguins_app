@@ -18,12 +18,10 @@ def main():
  
 
     if selected_option == "DF INPUT INFERENCE":
-        input_inf()
-        
+        df_inf()
 
     if selected_option == "MANUAL INPUT INFERENCE":
         input_inf()
-        df_inf()
 
 if __name__ == '__main__':
     
