@@ -1,9 +1,11 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
-import joblib
+from utils.load_model import load_model
 
 def main():
+
+    model = load_model()
+
     st.subheader("in Progress...")
     islands = ['Torgersen', 'Biscoe Island', 'Dream']
     island = st.selectbox('Select island: ', islands)
@@ -26,7 +28,6 @@ def main():
     df = pd.DataFrame(data)
     X = pd.get_dummies(df).to_numpy()
     st.dataframe(X)
-    model = joblib.load("penguins_pipe.pkl")
     y = model.predict(X)
 
     # Display the prediction

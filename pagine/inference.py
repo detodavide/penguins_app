@@ -5,13 +5,11 @@ import joblib
 from io import BytesIO
 
 from utils.cache_convert import convert_df
+from utils.load_model import load_model
 
 def main():
-    absolute_path = os.path.dirname(__file__)
-    relative_path = "penguins_pipe.pkl"
-    full_path = os.path.join(absolute_path, relative_path)
 
-    model_pipe = joblib.load(full_path)
+    model = load_model()
     #inference
     st.title("Penguins Classification") 
 
@@ -32,7 +30,7 @@ def main():
         st.write(dfdesc)
 
         
-        df_pred = model_pipe.predict(df)
+        df_pred = model.predict(df)
         df['species'] = df_pred
         st.write('Updated Dataframe')
         st.dataframe(df)
